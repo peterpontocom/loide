@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Material Icons';
+    src: url('iconfont/material-icons-outlined.woff') format('woff');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    text-decoration: none;
+    text-transform: none;
+    font-style: normal;
+}

@@ -1,0 +1,763 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-bold";
+  src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "dancing";
+  src: url("../fonts/DancingScript-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+input,
+button,
+a,
+i,
+ul,
+li {
+  all: unset;
+}
+
+a {
+  cursor: pointer;
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+header menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  color: #d0b378;
+}
+
+menu a {
+  cursor: pointer;
+}
+
+.logo span {
+  font-family: "dancing";
+}
+
+menu nav {
+  transform: translateX(0);
+}
+
+menu nav ul {
+  display: flex;
+  gap: 5rem;
+}
+
+menu nav li a {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+menu .links {
+  display: flex;
+  gap: 1rem;
+}
+
+menu .links a {
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+
+/*Parte 1*/
+main {
+  height: 100vh;
+}
+.first-zone {
+  min-height: 100%;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 2rem;
+}
+
+.first-zone .right,
+.left {
+  width: 50%;
+}
+
+.right {
+  background: #d0b378 url("../img/images/pexels-rfstudio-3811981.jpg") no-repeat
+    center center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.right::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0000005b;
+}
+
+.right .links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  margin: 1rem;
+}
+
+.right .links .link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bolder;
+  z-index: 1;
+  padding: 0.5rem;
+  border: 0.1rem solid #fff;
+  width: 17rem;
+  cursor: pointer;
+  transition: 0.5s;
+  animation: wid 1s;
+  animation-delay: 2s;
+  overflow: hidden;
+}
+
+.right .links .material-icons {
+  background-color: #fff;
+  color: #000;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-weight: lighter;
+  transition: 0.2s;
+}
+
+.right .links .link-item:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.right .links .link-item:hover .material-icons {
+  background-color: #000;
+  color: #fff;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.left .banner {
+  height: 80%;
+  background: #201305
+    /* url("../img/images/pexels-timothy-paule-ii-2002717.jpg") no-repeat center */
+    center;
+  background-size: cover;
+  border-radius: 2rem;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+.left .banner::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00000085;
+}
+
+.left .banner h1 {
+  font-size: 3em;
+  font-weight: bolder;
+  font-family: "Roboto-Bold";
+  line-height: 1em;
+  z-index: 1;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.left .banner p {
+  z-index: 1;
+  text-align: right;
+}
+
+.left .trending {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.left .trending div {
+  width: 50%;
+  position: relative;
+  background: #d0b378 no-repeat center;
+  background-size: cover;
+  height: 15rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bolder;
+  color: #fff;
+  font-size: 1.5em;
+  overflow: hidden;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.left .trending div::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000000a4;
+}
+
+.left .trending div:first-child {
+  background-image: url("../img/images/pexels-terje-sollie-298863.jpg");
+}
+
+.left .trending div:last-child {
+  background-image: url("../img/images/pexels-alexandra-maria-336372.jpg");
+}
+
+.left .trending div p {
+  z-index: 1;
+}
+
+article {
+  margin: 5rem 0;
+  padding: 0 2rem;
+}
+
+article p {
+  font-weight: bolder;
+  font-size: 1.8em;
+}
+
+.field-shop {
+  padding: 0 2rem;
+}
+
+.field-shop h2 {
+  font-weight: bolder;
+  font-size: 2em;
+  font-family: "Roboto-Bold";
+}
+
+.field-shop menu {
+  margin: 1rem 0;
+}
+
+.field-shop ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.field-shop ul li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 0.1rem solid #000;
+  color: #000;
+  border-radius: 2rem;
+  font-family: "Roboto-Bold";
+  font-size: 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.field-shop ul li sub {
+  font-family: "Roboto-Bold";
+  transform: translateY(0.2rem);
+  font-size: 0.6em;
+}
+.field-shop ul .prod-active {
+  color: #fff;
+  background-color: #000;
+}
+
+.field-shop .products {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content;
+  place-items: center;
+  place-content: center;
+  gap: 1rem;
+}
+
+.field-shop figure {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.field-shop figure:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000a8;
+  z-index: 0;
+  transition: 0.5s;
+  animation: hei 0.5s ease;
+}
+
+.field-shop figure .buy {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1;
+  transition: 1s;
+}
+
+.field-shop figure:hover .buy {
+  opacity: 1;
+  animation: hei 0.5s ease;
+}
+
+.field-shop figure .buy a {
+  padding: 1rem;
+  text-transform: uppercase;
+  font-family: "Roboto-Bold";
+  border: 0.1rem solid #fff;
+  color: #fff;
+  border-radius: 2rem;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.field-shop figure .buy a:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.field-shop figure img {
+  width: 30rem;
+  height: 40rem;
+}
+
+.field-shop figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2rem;
+  font-family: "Roboto-Bold";
+  font-weight: bolder;
+}
+
+.field-shop figure figcaption strong {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-family: "Roboto-Bold";
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+.prod-name,
+.prod-price {
+  display: block;
+  font-size: 1em;
+  font-family: "Roboto-Bold";
+  text-transform: uppercase;
+}
+
+.prod-price {
+  color: #ffaa00;
+}
+
+.second-zone {
+  padding: 0 4rem;
+  margin: 4rem 0;
+  gap: 0.5rem;
+  display: flex;
+}
+
+.second-zone .banner {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #201305;
+  border-radius: 2rem;
+  color: #fff;
+}
+
+.second-zone .banner .title {
+  border-bottom: 0.1rem solid #fff;
+}
+
+.second-zone .banner h1 {
+  font-family: "dancing";
+  font-size: 5em;
+  padding: 3rem;
+}
+
+.second-zone .sides {
+  display: flex;
+  padding: 4rem;
+}
+
+.second-zone .sides h2 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-family: "dancing";
+}
+
+.second-zone .sides h2 i {
+  padding: 0.5rem;
+  background-color: #000;
+  border-radius: 2rem;
+}
+
+.second-zone aside {
+  height: 50rem;
+  width: 30rem;
+  background: #000 url("../img/images/pexels-cottonbro-studio-10037708.jpg")
+    center no-repeat;
+  background-size: cover;
+  border-radius: 2rem;
+  width: 30%;
+  height: 60rem;
+}
+
+.video-zone {
+  padding: 0 4rem;
+}
+
+.video-zone h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.2em;
+  font-family: "Roboto-Bold";
+  margin: 1rem 0;
+}
+
+.video-zone div {
+  position: relative;
+  width: 100%;
+}
+
+.video-zone div video {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.video-zone div button.player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10em;
+  color: #f5932a;
+  cursor: pointer;
+}
+
+.video-zone div button.player.pause {
+  opacity: 0;
+  transition: 0.4s;
+  display: none;
+}
+
+.video-zone div:hover button.player.pause {
+  opacity: 1;
+}
+
+footer {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #131313;
+  color: #fff;
+}
+
+footer div h1 {
+  font-size: 1.3em;
+}
+
+footer div ul {
+  display: grid;
+  gap: 1rem;
+}
+
+footer div ul li a {
+  color: #bebebe;
+}
+
+footer div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer div p {
+  font-size: 2em;
+  font-family: "dancing";
+  text-align: center;
+  color: #fa2b69;
+}
+
+footer form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.1rem solid #bebebe;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+footer form button {
+  transform: rotate(-30deg);
+  padding: 0.5rem;
+  color: #000;
+  background-color: #f5932a;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.copyright {
+  background-color: #131313;
+  color: #cecece;
+  text-align: center;
+  padding: 2rem;
+}
+
+@keyframes wid {
+  0% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes hei {
+  0% {
+    transform: skew(-40deg);
+    height: 0;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: inline;
+    cursor: pointer;
+  }
+  .close {
+    display: inline;
+    cursor: pointer;
+  }
+  .first-zone {
+    flex-direction: column;
+  }
+  .first-zone .right,
+  .left {
+    width: 100%;
+  }
+  .right {
+    height: 30rem;
+  }
+
+  :root {
+    font-size: 57%;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 100%;
+    background-color: #d0b378;
+    color: #fff;
+    padding: 2rem;
+    transition: 0.4s;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .close {
+    align-self: flex-end;
+    font-size: 2.5em;
+  }
+  .field-shop ul li {
+    font-size: 0.8em;
+  }
+
+  .field-shop ul li sub {
+    font-size: 0.7em;
+  }
+  .second-zone {
+    flex-direction: column;
+  }
+  .second-zone .banner {
+    width: 100%;
+  }
+
+  .second-zone .banner .sides {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .second-zone aside {
+    width: 100%;
+    height: 30rem;
+  }
+}
+
+@media screen and (max-width: 1228px) {
+  .field-shop .products {
+    grid-template-columns: max-content max-content max-content;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .field-shop .products {
+    grid-template-columns: max-content max-content;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+  }
+  footer div:last-child {
+    margin-top: 1.5rem;
+    grid-column: 1/5;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .field-shop .products {
+    grid-template-columns: max-content;
+  }
+  .field-shop ul li {
+    font-size: 0.7em;
+  }
+
+  .field-shop ul li sub {
+    font-size: 0.7em;
+  }
+    footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer div {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .field-shop .products {
+    grid-template-columns: max-content;
+  }
+  .field-shop ul li {
+    padding: .2;
+    font-size: 0.6em;
+    text-align: center;
+  }
+
+  .field-shop ul li sub {
+    font-size: 0.7em;
+    display: none;
+  }
+
+  .right .links{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .left .banner h1 {
+    font-size: 2em;
+  }
+  .left .banner p {
+    margin-top: 1rem;
+  }
+
+  .left .trending div {
+    font-size: .9em;
+  }
+
+  .second-zone .banner h1 {
+    font-size: 2em;
+  }
+
+  .video-zone h1 {
+    font-size: 1em;
+  }
+
+  .video-zone div button.player {
+    font-size: 5em;
+  }
+
+}
+/*-------------------*/

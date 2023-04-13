@@ -1,2 +1,2 @@
 # loide
- Linha de Orientação para Identidade e Estilo
+ Linha de Orientação para Identidade de Estilo
